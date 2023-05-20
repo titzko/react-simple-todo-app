@@ -15,6 +15,11 @@ function App() {
 		setTask('');
 	}
 
+	function deleteTask(index) {
+		const i = index.index
+		setTasks([...tasks.slice(0,i), ...tasks.slice(i+1)]);
+	}
+
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -27,7 +32,7 @@ function App() {
 					 />
 					<button type="submit">Add Task</button>
 					</form>
-					<OverviewComponent tasks={tasks} />
+					<OverviewComponent tasks={tasks} deleteFn={deleteTask} />
 				</div>
 			</header>
 		</div>

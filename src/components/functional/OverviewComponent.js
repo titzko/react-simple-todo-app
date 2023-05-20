@@ -1,7 +1,13 @@
-export default function OverviewComponent({tasks}) {
+export default function OverviewComponent({tasks, deleteFn}) {
 
     const taskList = tasks.map((task,index) => {
-        return (<li key={index}>{task}</li>);
+
+        return (
+            <div key={index} className="d-flex">
+        <div>{index + 1}: {task}</div>
+        <button onClick={()=>deleteFn({index})}>Delete</button>
+        </div>
+        );
     });
 
     return (

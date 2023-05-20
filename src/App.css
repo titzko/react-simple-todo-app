@@ -33,6 +33,10 @@
   margin-bottom: 42px;
 }
 
+.d-flex {
+  display: flex;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

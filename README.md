@@ -1,4 +1,11 @@
-idk, the git ui in vs-code seems to troll me when i try to add a remote repo. however, this command seams to work for the future
+For adding a remote repository via the command line, you can use the following command:
 
-### git remote add [<options>] <name> <url>
-### git remote add "react-simple-todo-app" "https://github.com/titzko/react-simple-todo-app.git"
+```bash
+git remote add <name> <url>
+```
+
+for instance
+
+```bash
+git remote add react-simple-todo-app https://github.com/titzko/react-simple-todo-app.git
+```

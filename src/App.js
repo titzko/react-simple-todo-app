@@ -15,6 +15,17 @@ function App() {
 		setTask('');
 	}
 
+	function save(i, updatedTask) {
+		const updatedTasks = tasks.map((currentTask, index) => {
+			if (index===i) {
+				return updatedTask;
+			} else {
+				return currentTask;
+			}
+		})
+		setTasks(updatedTasks);
+	}
+
 	function deleteTask(index) {
 		const i = index.index
 		setTasks([...tasks.slice(0,i), ...tasks.slice(i+1)]);
@@ -32,7 +43,7 @@ function App() {
 					 />
 					<button type="submit">Add Task</button>
 					</form>
-					<OverviewComponent tasks={tasks} deleteFn={deleteTask} />
+					<OverviewComponent tasks={tasks} deleteFn={deleteTask} saveFn={save} />
 				</div>
 			</header>
 		</div>

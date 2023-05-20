@@ -1,12 +1,13 @@
-export default function OverviewComponent({tasks, deleteFn}) {
+import TaskComponent from "./TaskComponent";
 
+export default function OverviewComponent({tasks, deleteFn, saveFn}) {
+
+    
     const taskList = tasks.map((task,index) => {
-
         return (
-            <div key={index} className="d-flex">
-        <div>{index + 1}: {task}</div>
-        <button onClick={()=>deleteFn({index})}>Delete</button>
-        </div>
+            <div key={index} >
+                <TaskComponent task={task} index={index} deleteFn={deleteFn} saveFn={saveFn}/>
+            </div>
         );
     });
 

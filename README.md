@@ -1,6 +1,6 @@
 Find running version of this App here:
 
-[Running App](/guides/content/editing-an-existing-page)
+[Running App](https://titzko.github.io/react-simple-todo-app/)
 
 
 For adding a remote repository via the command line, you can use the following command:

@@ -36,12 +36,12 @@ function App() {
 			<header className="App-header">
 				<div className="mt-5">
 					<form onSubmit={submitTask} style={{"display": "flex", "justifyContent": "space-around"}}>
-					<label htmlFor="task">Task</label>
+					<label htmlFor="task">Add Task</label>
 					<input id="task"
 					 value={task}
 					 onChange={(event) => setTask(event.target.value)}
 					 />
-					<button type="submit">Add Task</button>
+					<button type="submit">+</button>
 					</form>
 					<OverviewComponent tasks={tasks} deleteFn={deleteTask} saveFn={save} />
 				</div>
